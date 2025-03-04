@@ -15,15 +15,25 @@
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
     "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.1",
     "babel-loader": "^8.2.5",
+    "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
+    "sass": "^1.85.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
-    "webpack": "^5.74.0",
+    "webpack": "^5.98.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.2"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

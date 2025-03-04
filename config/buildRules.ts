@@ -1,13 +1,23 @@
-import webpack from 'webpack'
+import webpack from 'webpack';
 
 export function buildRules(): webpack.RuleSetRule[] {
-    const typeScriptLoaders = {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/,
-        }
+  const cssLoaders = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      // Creates `style` nodes from JS strings
+      'style-loader',
+      // Translates CSS into CommonJS
+      'css-loader',
+      // Compiles Sass to CSS
+      'sass-loader',
+    ],
+  };
 
-    return [
-        typeScriptLoaders,
-    ]
+  const typeScriptLoaders = {
+    test: /\.tsx?$/,
+    use: 'ts-loader',
+    exclude: /node_modules/,
+  };
+
+  return [typeScriptLoaders, cssLoaders];
 }
